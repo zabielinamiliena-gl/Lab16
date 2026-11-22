@@ -1,0 +1,135 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="1720" height="1120" viewBox="0 0 1720 1120">
+<rect width="1720" height="1120" fill="#ffffff"/>
+<g font-family="Arial, sans-serif">
+<text x="860" y="28" text-anchor="middle" font-size="18" font-weight="bold" fill="#222">Завдання 3. Обхід пасажирів рейсу (Iterator)</text>
+<rect x="30" y="46" width="430" height="136" fill="#E8F5E9" stroke="#222" stroke-width="1.6"/>
+<text x="245" y="66" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;Client&gt;&gt;</text>
+<text x="245" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Program</text>
+<line x1="30" y1="100" x2="460" y2="100" stroke="#222" stroke-width="1.2"/>
+<text x="40" y="120" font-size="13" fill="#111" text-decoration="underline">+ Main() : void</text>
+<text x="40" y="140" font-size="13" fill="#111">- Situation3() : void</text>
+<text x="40" y="160" font-size="13" fill="#111">- Step(journal, mover, other) : void</text>
+<rect x="1280" y="46" width="400" height="150" fill="#F5F5F5" stroke="#222" stroke-width="1.6"/>
+<text x="1480" y="88" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Journal</text>
+<line x1="1280" y1="100" x2="1680" y2="100" stroke="#222" stroke-width="1.2"/>
+<text x="1290" y="120" font-size="13" fill="#111">- minutes : int</text>
+<line x1="1280" y1="134" x2="1680" y2="134" stroke="#222" stroke-width="1.2"/>
+<text x="1290" y="156" font-size="13" fill="#111">+ Journal(startHour, startMinute)</text>
+<text x="1290" y="176" font-size="13" fill="#111">+ Write(source, message) : void</text>
+<rect x="30" y="240" width="500" height="270" fill="#FFF3E0" stroke="#222" stroke-width="1.6"/>
+<text x="280" y="260" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;Aggregate&gt;&gt;</text>
+<text x="280" y="282" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Cabin</text>
+<line x1="30" y1="294" x2="530" y2="294" stroke="#222" stroke-width="1.2"/>
+<text x="40" y="314" font-size="13" fill="#111">- rows : List&lt;List&lt;Passenger&gt;&gt;</text>
+<text x="40" y="334" font-size="13" fill="#111">- infants : List&lt;Passenger&gt;</text>
+<line x1="30" y1="348" x2="530" y2="348" stroke="#222" stroke-width="1.2"/>
+<text x="40" y="370" font-size="13" fill="#111">+ AddSeat(row, letter, name, mark) : void</text>
+<text x="40" y="390" font-size="13" fill="#111">+ AddInfant(name) : void</text>
+<text x="40" y="410" font-size="13" fill="#111">+ PrintLayout(journal) : void</text>
+<text x="40" y="430" font-size="13" fill="#111">+ BoardingOrder() : IPassengerIterator</text>
+<text x="40" y="450" font-size="13" fill="#111">+ CateringOrder() : IPassengerIterator</text>
+<text x="40" y="470" font-size="13" fill="#111">+ SecurityOrder() : IPassengerIterator</text>
+<rect x="620" y="250" width="360" height="220" fill="#E0F2F1" stroke="#222" stroke-width="1.6"/>
+<text x="800" y="292" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">Passenger</text>
+<line x1="620" y1="304" x2="980" y2="304" stroke="#222" stroke-width="1.2"/>
+<text x="630" y="324" font-size="13" fill="#111">+ Name : string</text>
+<text x="630" y="344" font-size="13" fill="#111">+ Seat : string</text>
+<text x="630" y="364" font-size="13" fill="#111">+ Mark : string</text>
+<text x="630" y="384" font-size="13" fill="#111">+ Infant : bool</text>
+<line x1="620" y1="398" x2="980" y2="398" stroke="#222" stroke-width="1.2"/>
+<text x="630" y="420" font-size="13" fill="#111">+ Passenger(name, seat, mark, infant)</text>
+<text x="630" y="440" font-size="13" fill="#111">+ Text() : string</text>
+<rect x="1080" y="250" width="400" height="170" fill="#F3E5F5" stroke="#222" stroke-width="1.6"/>
+<text x="1280" y="270" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;Iterator&gt;&gt;</text>
+<text x="1280" y="292" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">IPassengerIterator</text>
+<line x1="1080" y1="304" x2="1480" y2="304" stroke="#222" stroke-width="1.2"/>
+<text x="1090" y="324" font-size="13" fill="#111">+ Name : string</text>
+<text x="1090" y="344" font-size="13" fill="#111">+ Position : string</text>
+<line x1="1080" y1="358" x2="1480" y2="358" stroke="#222" stroke-width="1.2"/>
+<text x="1090" y="380" font-size="13" fill="#111">+ HasNext() : bool</text>
+<text x="1090" y="400" font-size="13" fill="#111">+ Next() : Passenger</text>
+<rect x="30" y="640" width="500" height="230" fill="#E3F2FD" stroke="#222" stroke-width="1.6"/>
+<text x="280" y="660" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;ConcreteIterator&gt;&gt;</text>
+<text x="280" y="682" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">BoardingIterator</text>
+<line x1="30" y1="694" x2="530" y2="694" stroke="#222" stroke-width="1.2"/>
+<text x="40" y="714" font-size="13" fill="#111">- order : List&lt;Passenger&gt;</text>
+<text x="40" y="734" font-size="13" fill="#111">- index : int</text>
+<line x1="30" y1="748" x2="530" y2="748" stroke="#222" stroke-width="1.2"/>
+<text x="40" y="770" font-size="13" fill="#111">+ BoardingIterator(rows)</text>
+<text x="40" y="790" font-size="13" fill="#111">+ Name : string</text>
+<text x="40" y="810" font-size="13" fill="#111">+ Position : string</text>
+<text x="40" y="830" font-size="13" fill="#111">+ HasNext() : bool</text>
+<text x="40" y="850" font-size="13" fill="#111">+ Next() : Passenger</text>
+<rect x="580" y="640" width="520" height="230" fill="#E3F2FD" stroke="#222" stroke-width="1.6"/>
+<text x="840" y="660" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;ConcreteIterator&gt;&gt;</text>
+<text x="840" y="682" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">CateringIterator</text>
+<line x1="580" y1="694" x2="1100" y2="694" stroke="#222" stroke-width="1.2"/>
+<text x="590" y="714" font-size="13" fill="#111">- order : List&lt;Passenger&gt;</text>
+<text x="590" y="734" font-size="13" fill="#111">- index : int</text>
+<line x1="580" y1="748" x2="1100" y2="748" stroke="#222" stroke-width="1.2"/>
+<text x="590" y="770" font-size="13" fill="#111">+ CateringIterator(rows, infants)</text>
+<text x="590" y="790" font-size="13" fill="#111">+ Name : string</text>
+<text x="590" y="810" font-size="13" fill="#111">+ Position : string</text>
+<text x="590" y="830" font-size="13" fill="#111">+ HasNext() : bool</text>
+<text x="590" y="850" font-size="13" fill="#111">+ Next() : Passenger</text>
+<rect x="1160" y="640" width="520" height="230" fill="#E3F2FD" stroke="#222" stroke-width="1.6"/>
+<text x="1420" y="660" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;ConcreteIterator&gt;&gt;</text>
+<text x="1420" y="682" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">SecurityIterator</text>
+<line x1="1160" y1="694" x2="1680" y2="694" stroke="#222" stroke-width="1.2"/>
+<text x="1170" y="714" font-size="13" fill="#111">- order : List&lt;Passenger&gt;</text>
+<text x="1170" y="734" font-size="13" fill="#111">- index : int</text>
+<line x1="1160" y1="748" x2="1680" y2="748" stroke="#222" stroke-width="1.2"/>
+<text x="1170" y="770" font-size="13" fill="#111">+ SecurityIterator(rows, infants)</text>
+<text x="1170" y="790" font-size="13" fill="#111">+ Name : string</text>
+<text x="1170" y="810" font-size="13" fill="#111">+ Position : string</text>
+<text x="1170" y="830" font-size="13" fill="#111">+ HasNext() : bool</text>
+<text x="1170" y="850" font-size="13" fill="#111">+ Next() : Passenger</text>
+<rect x="30" y="940" width="500" height="100" fill="#E8F5E9" stroke="#222" stroke-width="1.6"/>
+<text x="280" y="960" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;Client&gt;&gt;</text>
+<text x="280" y="982" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">BoardingService</text>
+<line x1="30" y1="994" x2="530" y2="994" stroke="#222" stroke-width="1.2"/>
+<text x="40" y="1014" font-size="13" fill="#111">+ Serve(passengers, journal) : void</text>
+<rect x="580" y="940" width="520" height="100" fill="#E8F5E9" stroke="#222" stroke-width="1.6"/>
+<text x="840" y="960" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;Client&gt;&gt;</text>
+<text x="840" y="982" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">CateringService</text>
+<line x1="580" y1="994" x2="1100" y2="994" stroke="#222" stroke-width="1.2"/>
+<text x="590" y="1014" font-size="13" fill="#111">+ Serve(passengers, journal) : void</text>
+<rect x="1160" y="940" width="520" height="100" fill="#E8F5E9" stroke="#222" stroke-width="1.6"/>
+<text x="1420" y="960" text-anchor="middle" font-size="12" font-style="italic" fill="#333">&lt;&lt;Client&gt;&gt;</text>
+<text x="1420" y="982" text-anchor="middle" font-size="15" font-weight="bold" fill="#111">SecurityService</text>
+<line x1="1160" y1="994" x2="1680" y2="994" stroke="#222" stroke-width="1.2"/>
+<text x="1170" y="1014" font-size="13" fill="#111">+ Serve(passengers, journal) : void</text>
+<polyline points="245,182 245,239" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="239,229 245,240 251,229" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="307" y="215" text-anchor="middle" font-size="13" fill="#333">створює</text>
+<polygon points="546,332 560,340 546,348 532,340" fill="#222" stroke="#222"/>
+<polyline points="530,340 604,340" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="575" y="328" text-anchor="middle" font-size="13" fill="#333">композиція</text>
+<text x="538" y="358" text-anchor="start" font-size="13" fill="#333">1</text>
+<text x="592" y="358" text-anchor="end" font-size="13" fill="#333">1..*</text>
+<polyline points="280,510 280,610 1420,610" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="274,629 280,640 286,629" fill="none" stroke="#222" stroke-width="1.5"/>
+<polyline points="280,610 280,639" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="834,629 840,640 846,629" fill="none" stroke="#222" stroke-width="1.5"/>
+<polyline points="840,610 840,639" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="1414,629 1420,640 1426,629" fill="none" stroke="#222" stroke-width="1.5"/>
+<polyline points="1420,610 1420,639" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="760" y="600" text-anchor="middle" font-size="13" fill="#333">створює</text>
+<polygon points="1160,420 1152,433 1168,433" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<polyline points="480,640 480,580 1160,580 1160,433" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="1260,420 1252,433 1268,433" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<polyline points="1000,640 1000,520 1260,520 1260,433" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polygon points="1360,420 1352,433 1368,433" fill="#fff" stroke="#222" stroke-width="1.4"/>
+<polyline points="1600,640 1600,470 1360,470 1360,433" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<text x="900" y="548" text-anchor="middle" font-size="13" fill="#333">realization</text>
+<polyline points="1080,360 981,360" fill="none" stroke="#222" stroke-width="1.5"/>
+<polyline points="991,354 980,360 991,366" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="1030" y="348" text-anchor="middle" font-size="13" fill="#333">повертає</text>
+<polyline points="1420,940 1420,1070 1700,1070 1700,330 1481,330" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="1491,324 1480,330 1491,336" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="1660" y="700" text-anchor="start" font-size="13" fill="#333">обходить</text>
+<polyline points="500,240 500,110 1279,110" fill="none" stroke="#222" stroke-width="1.5" stroke-dasharray="7 5"/>
+<polyline points="1269,104 1280,110 1269,116" fill="none" stroke="#222" stroke-width="1.5"/>
+<text x="900" y="102" text-anchor="middle" font-size="13" fill="#333">залежність</text>
+</g></svg>
